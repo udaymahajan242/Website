@@ -1,44 +1,54 @@
-- company: Upstatement
-  url: https://www.upstatement.com/
-  time: May 2018 - Present
-  position: Engineer
+- company: Tesla Inc.
+  logo: tesla
+  url: https://www.tesla.com/
+  time: March 2022 - Present
+  location: Bellevue, WA
+  flag: usa
+  position: Senior Software Engineer
+- company: Tesla Inc.
+  logo: tesla
+  url: https://www.tesla.com/
+  time: March 2021 - Feb 2022
+  location: Bellevue, WA
+  flag: usa
+  position: Software Engineer (II) 
+- company: T-Mobile
+  logo: tmo
+  url: https://t-mobile.com/
+  time: Mar 2020 - Mar 2021
+  location: Bellevue, WA
+  flag: usa
+  position: Software Engineer
 
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2018
-  position: Studio Developer
+- company: T-Mobile
+  logo: tmo
+  url: https://t-mobile.com/
+  time: Jun 2019 - Dec 2019
+  location: Bellevue, WA
+  flag: usa
+  position: Software Engineer Intern
 
-- company: Apple Music
-  url: https://www.apple.com/music/
-  time: July - Dec 2017
-  position: UI Engineer Co-op
+- company: University of Washington
+  
+  url: https://www.washington.edu/
+  logo: uws
+  time: Sep 2017 - Dec 2018
+  location: Seattle, WA
+  flag: usa
+  position: Research Lab Assistant (Part-Time)
 
-- company: Scout
-  url: https://web.northeastern.edu/scout/
-  time: Jan - June 2017
-  position: Studio Developer
+- company: Univeristy of Washington
+  logo: uws
+  url: https://www.washington.edu/
+  time: Sep 2018 - June 2019
+  location: Seattle, WA
+  flag: usa
+  position: Mobile App Developer (Part-Time)
 
-- company: Starry
-  url: https://starry.com/
-  time: July - Dec 2016
-  position: Software Engineer Co-op
-
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Jan - May 2016
-  position: HCI Teaching Assistant
-
-- company: NU Women in Tech
-  url: http://nuwit.ccs.neu.edu/
-  time: Jan 2016 - May 2017
-  position: President & Web Chair
-
-- company: MullenLowe U.S.
-  url: https://us.mullenlowe.com/
-  time: July - Dec 2015
-  position: Creative Technologist Co-op
-
-- company: Northeastern University
-  url: http://www.ccis.northeastern.edu/
-  time: Mar - May 2015
-  position: HCI Research Assistant
+- company: Pierce College
+  logo: pc
+  url: http://www.pierce.ctc.edu/
+  time: Sep 2015 - Mar 2017
+  location: Puyallup, WA
+  flag: usa
+  position: Professional Tutor (Part-Time)

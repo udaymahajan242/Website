@@ -1,0 +1,23 @@
+<section class="section skills">
+  <div class="section__title"> <i class="fa fa-desktop" aria-hidden="true"></i> CREDITS</div>
+  <div class="section__content">
+    <div class="skillz">
+      <div class="skillz__category">
+        <div class="skillz__category__label">CSS</div>
+        <ul>
+          {% for css in site.data.credits.css %}
+          <li class="skillz__category__item">{{css.item}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Scripts</div>
+        <ul>
+          {% for js in site.data.credits.js %}
+          <li class="skillz__category__item">{{js.item}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

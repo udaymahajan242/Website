@@ -1,0 +1,39 @@
+- institution: University of Washington
+  logo: uws
+  url: https://www.washington.edu/
+  time: Mar 2017 - Dec 2019
+  location: Seattle, Washington
+  flag: usa
+  course: Bachelor of Science in Computer Engineering
+
+- institution: Pierce College
+  logo: pc
+  url: https://www.pierce.ctc.edu/
+  time: Jan 2015 - Mar 2017
+  location: Puyallup, Washington
+  flag: usa
+  course: Associate of Science in Engineering
+
+- institution: Tacoma Community College
+  logo: tcc
+  url: https://www.tacomacc.edu/
+  time: Sep 2016 - Mar 2017
+  location: Tacoma, Washington
+  flag: usa
+  course:  Introduction to Computer Science
+
+- institution: St. Stephen's School
+  logo: ss
+  url: http://www.stephenschandigarh.com/
+  time: Mar 2012 - Jun 2014
+  location: Togan, Chandigarh
+  flag: india
+  course: [Senior Secondary Education]
+
+- institution: Pinegrove School
+  logo: pinegrove 
+  url: http://www.pinegrove.in
+  time: Mar 2005 - Dec 2011
+  location: Dharampur, Himachal Pradesh
+  flag: india
+  course: [Primary and Secondary Education]

@@ -1,9 +1,11 @@
+
+
 .intro {
-  padding: 120px 100px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   max-width: 1440px;
   margin: 0 auto;
   @include weird-medium {
@@ -16,10 +18,19 @@
     padding: 70px 50px;
   }
 
+  @media screen and (max-width: 600px) {
+    intro {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+  
   &__hello, &__tagline {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     @include desktop {
-      font-size: 2.25rem;
+      font-size: 2.00rem;
     }
     @include tablet {
       font-size: 2rem;
@@ -33,6 +44,7 @@
     @include tiny-mobile {
       font-size: 1.4rem;
     }
+  
     .emoji {
       width: 40px;
       height: 40px;
@@ -93,7 +105,12 @@
   &__tagline {
     font-weight: 300;
     max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .name {
+      
       font-weight: 700;
     }
     .technologist {
@@ -109,6 +126,40 @@
     .emoji {
       &.pointer {
         background-image: url('../img/emojis/pointright.png');
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        @include phablet {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      &.email {
+        background-image: url('../img/emojis/email.png');
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        @include phablet {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      &.speech {
+        background-image: url('../img/emojis/speech.png');
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        @include phablet {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+
+      &.pointerdown {
+        background-image: url('../img/emojis/pointdown.png');
         width: 30px;
         height: 30px;
         margin: 0 5px;
@@ -133,4 +184,6 @@
       }
     }
   }
+
+  
 }

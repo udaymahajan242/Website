@@ -1,0 +1,9 @@
+.social-list ul 
+        {   display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            flex-wrap: wrap;
+        }

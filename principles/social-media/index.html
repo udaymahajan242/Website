@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>My Principles - Social Media</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body onmousedown="return false" onselectstart="return false"><article id="ebc37be5-99e6-4577-ba9d-a507ddb3fa77" class="page sans"><header><img class="page-cover-image" src="https://peergos.org/theme/img/blog/the-social-dilemma.png" style="object-position:center 63.84000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.pngkit.com/png/full/110-1103199_share-this-article-family-on-social-media-clipart.png"/></div><h1 class="page-title">My Principles - Social Media</h1></header><div class="page-body"><hr id="8d2550c3-17d1-4c75-8da7-9f57b066dd21"/><p id="3e40584c-6cfa-4fc0-9e9b-f69c15336895" class="">
+</p><blockquote id="c43eefb0-eaaa-46b2-91f3-99a476e6ebf4" class=""><em><strong>“Principles are fundamental truths that serve as the foundations for behavior that gets you what you want out of life.”</strong></em>
+- <em><span style="border-bottom:0.05em solid">Ray Dalio</span></em></blockquote><p id="51a5c54e-92fe-4a3c-a2c4-4f09e3479e01" class="">
+</p><h3 id="180cd9d4-429b-49e7-82de-bab1ff0b998d" class="">⚠️ Disclaimer &amp; Context: </h3><p id="0989eab0-1358-491d-b30c-c67c497abeff" class="">
+</p><p id="6b55f2e1-074d-4238-b28e-d4e876cfd48b" class="">I live my life according to certain documented principles of life, work, and relationships which are thoughtfully formulated and periodically revised by me. </p><p id="7eafb50f-a44a-49ee-bfe2-0104bdffd763" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1b5c6365-b7a4-4aed-ab52-1475c72e9b35"><div style="font-size:1.5em"><span class="icon">📝</span></div><div style="width:100%"><strong>Note that I do not like preaching and these are notes to myself. 
+
+You may feel free to disagree depending on your varied frame of reference, thoughts, and experience.
+
+</strong><em><strong>The sole purpose of this page being publicly available is for me to be transparent about my social media usage &amp; avoid any misunderstandings without having to repeat the same thing to multiple people.</strong></em></div></figure><p id="94c5a758-2127-424a-b249-0ec3802100f8" class="">
+</p><p id="788c33c9-76af-4a77-8bed-1fc524f0a137" class="">I started formulating my principles along with maintaining a personal journal a few years ago for self-growth and to provide value to the world. Everyone operates on certain principles, some are consciously aware of them, others not so much. What separates great people like Naval Ravikant, Ray Dalio, Charlie Munger, Jocko Willink, etc. from other people is their principles, values, and mental models which govern their actions.</p><p id="a20c64db-f93d-4883-8c21-4c5edbe1fef0" class="">My principles are constructed after observations from personal experience, application of the knowledge from great books, podcasts, interviews, and credible research-based studies and observing and studying people. Just like with anything in life, these are not hard and fast rules but reasonable guidelines for my actions.</p><p id="27b5a449-c4d9-43d0-8b58-9e2534e9c6ec" class="">
+</p><p id="b1cb4a9a-e755-4d7e-87b7-9139323ecd63" class="">Although I have never been negatively affected by social media usage, I have observed multiple people around me getting affected by it and hence I decided to formulate principles for social media. Furthermore, I am <strong>not</strong> going to make my life, work and relationship principles public yet as I do not have any strong reason to do so and the only reason I am making my social media principles public is that I repeatedly get asked about <strong>why</strong> I occasionally post and then eventually delete on Instagram, disable commenting, remove and unfollow people that I once followed a couple of years ago, use one platform over others and do not often share my associations with people and my life happenings online.</p><p id="b9159ef3-7538-486f-ae5a-546406e4d76b" class="">That being said, if we have previously met and you have a strong opinion about these, please do not hesitate to reach out. I love constructive criticism.</p><p id="9779fcb4-22e7-43ba-85b5-c7a414775b13" class="">
+</p><blockquote id="075e147b-b243-4718-9359-5703467f62a5" class=""><em>“If you are on social media, and you are not learning, not laughing, not being inspired or not networking, then you are using it wrong.”</em>
+
+- Germany Kent</blockquote><h2 id="ff516843-c758-47f5-8179-0573bdc0ff9c" class=""><strong>1. </strong>Social media is a tool - use it wisely.</h2><p id="b4d26ce0-3b0f-45cf-9f2f-daddac61421f" class="">Social media is far from being all bad.</p><p id="5bd7db32-086d-4ac6-9397-4dd1c396fd08" class="">There are often tangible benefits that follow from responsible and conscious social media use. Many people log on to social media for a sense of belonging, self-expression, curiosity, or a desire to connect. The main advantage of social media is digital connectivity with geographically dispersed acquaintances and friends, the ability to find interesting events or places, communicate with like-minded others around our interests.</p><p id="21d29295-c5f8-42f4-8c6c-23effdc6e697" class="">Social media can also be used for noble causes, create awareness, build communities around the way people live, build a personal brand, and much more. </p><p id="74285c34-9a41-4c6c-918a-146e9eaab46d" class="">It is also hard to remember dates like birthdays and is a good idea to wish people I wish to stay connected with on their birthdays via Messenger/WhatsApp. </p><p id="5c3f92ec-0978-4d64-af16-7b8226740f41" class="">Nowadays, I mostly use Twitter (using curated lists instead of following other accounts), Instagram (where I am extremely selective about following and giving access to my profile). Once in a while, I log in to Facebook, Snapchat, however, these days they provide little to no value. Facebook&#x27;s algorithm is so bad that the news feed rarely provides any value. </p><p id="3b3553d7-f965-442e-9aae-78eb30d2a0e8" class="">When using social media following the right accounts and curating the feeds on Instagram/Twitter is very important as ultimately our thoughts and actions are shaped by what we consume. </p><p id="a250abcc-f70d-4374-ba83-ff576a96d152" class="">If someone needs to reach out to me or after several years, Facebook, Instagram messaging may provide great value for that purpose. Responses might be delayed though as I only log in once or twice a day for a limited time, that too on my computer and not phone (unless I am traveling).</p><p id="e3ad4de6-04eb-4fb0-99b5-550ce70957d9" class="">
+</p><blockquote id="bb9fc8a4-5b6e-4627-921b-8893668b7dd9" class="">&quot;<em>We curate our lives around this perceived sense of perfection because we get rewarded in these short-term signals: hearts, likes, thumbs up and we conflate that with value and we conflate it with truth.&quot;</em>
+
+<em>- Chamath Palihapitiya</em></blockquote><h2 id="f0d2a2b3-1df0-4b4f-8128-28c19b351de0" class="">2. <strong>Avoid</strong> <strong>Manipulation &amp; Embrace Reality - </strong><em><strong>Nullius in verba</strong></em></h2><p id="a4442606-114e-4a9d-885d-98fcbbf8ebd4" class="">Algorithmically curated feeds = Echo-chamber of Confirmation Bias.</p><p id="1559da5c-8066-45d1-a301-5cae77237c5e" class="">Social media increases the returns to intolerance. Fake news, algorithmically curated feeds are undermining the “truth”. People choose various types of content to post on different social media platforms and their posts may not always present an accurate picture about their life or this world.  In the court of social media, context is inadmissible. Social media also tends to make every problem, your problem by showing snippets about an issue.</p><p id="5ee96642-cb8c-4145-a9a2-152aa6fbb54c" class="">Furthermore, a lot of people (not everyone) do tend to glamorize their lives sometimes to seek attention or avoid facing their insecurities and weaknesses in the real world.  We humans are like moon, we only show our shining side on social media.</p><p id="c9df6d3a-1044-444b-bdc9-6d9bcef5b94a" class="">According to Maslow&#x27;s hierarchy of needs, people post due to their needs of connecting with other humans, to feel some kind of social acceptance from a group or individual by sharing their accomplishments and opinions, for self-actualization to feel rewarded by bragging or showing off, promote an agenda or political rant to feel relevant. </p><p id="e9aaa6fc-c6a5-4ae0-b86c-7636b018c9d9" class="">Instagram makes people seem better-looking and happier than they really are which can have negative effects on the psyche of followers who might buy into it.  It&#x27;s also important to recognize that two people on the internet could perceive the same post differently, a lot of times out of context.</p><p id="c99979f9-d1f1-4013-abb7-5f52c336c4b9" class="">Therefore,<span style="border-bottom:0.05em solid"> I must consciously post on social media and never make an opinion about someone based on their social media posts or engagement.  </span></p><p id="2f191919-eb52-4586-8af1-8940ce0a8a1b" class="">I also hope that others do not think my life is better or worse than their life based on what I occasionally share on the internet. Ultimately a good &amp; fulfilling life is meant to be filled with constant short term struggles that build one&#x27;s character in the long term; it&#x27;s just that we all go through different struggles in different phases of our life and social media does not provide an accurate representation of the same.</p><p id="dcd6dfb1-037c-430c-854f-7797dd687c81" class="">
+</p><p id="ccc50bdb-5363-49ad-88ac-025919e57f61" class="">
+</p><blockquote id="38f99310-c3ba-47ab-a93b-ab474f8f35c0" class=""><em>“Play long-term games with long-term people.
+All returns in life, whether in wealth, relationships, or knowledge, come from compound interest.”</em>
+
+- Naval Ravikant</blockquote><h2 id="c5efbad4-3b44-4d1e-af2e-d0b33a257547" class="">3. Be selectively social - accept requests &amp; follow cautiously.</h2><p id="897a9833-47ed-473d-ba9a-6a7f5668a07f" class="">    <em>Social Media Friends ≠ Friends.</em></p><p id="26e247fa-83c8-476a-8e83-75f3fd430875" class="">
+</p><p id="e58a4a44-0360-491a-b399-9641cfe221d7" class="">Most people often label others that they shared some good amount of time with during a certain phase of life as &quot;friends&quot;, consume their activity on social media, which if not done thoughtfully can lead to continuous behavior modification without them realizing its short &amp; long-term consequences. </p><p id="c75bd030-1451-404f-bb56-4ab04327c896" class="">Engaging with people just by consuming their stories, liking their posts, projecting your life is NOT staying in touch. Authentically staying in touch requires deliberate effort from both individuals to share their experiences via calls and messages, organizing meetups, or virtual hangouts. If two people just &quot;connect&quot; merely via social media platforms, are they connected?  Probably not.</p><p id="233cbf40-fe7b-4f1b-a81f-5e12ffef24bf" class="">Therefore, <span style="border-bottom:0.05em solid">it is very important to assess if just a short-term or long term acquaintance and give them access to my profile and follow them accordingly.</span></p><p id="512c75e6-9d1d-4c02-be41-2fd0b2bb44b5" class="">
+</p><p id="969f3714-613f-4d5e-b220-7321f9f16d2e" class="">
+</p><blockquote id="7257e5ca-e5f1-485e-a3e4-b1ad49ebb3b7" class=""><strong><em>&quot;People come into your life for a Reason, a Season, or a Lifetime....</em></strong><em>&quot;
+</em>
+- &lt;Author Unknown&gt;</blockquote><h2 id="762497ce-66cc-4115-8124-ea4f2f4b56eb" class="">4. Curate<strong> Lists</strong></h2><p id="a1c79a63-e04d-4b74-b513-ff314ad38ae2" class="">      <em>Everyone evolves with time.</em></p><p id="b66f8fc0-2853-4c51-bbf1-980d54552611" class="">Different people play different roles in life, some assist through a difficulty, some push you to a greater level, some teach lifetime lessons, some give an unbelievable amount of joy. My job is to love the person, cherish those moments, apply the lesson in life.</p><p id="e594d66e-cf58-48ec-819b-f2e24c737624" class="">That being said, people are also often shaped by their experiences which are determined by a lot of factors such as their upbringing, opinions, circle of influence, media consumption, etc. all of which are highly variable with time. So, a person that I might have resonated with or admired at some point might have a different personality and traits a few years later and if not in contact, we might not know each other anymore. People that I don&#x27;t know must not have access to my posts which provide insights into my life and thoughts.</p><p id="5754d519-707c-4b1c-b81e-417f7662bf2c" class="">Therefore, <em>it&#x27;s</em> a good idea to<span style="border-bottom:0.05em solid"> re-evaluate and curate the list of friends/followers periodically and disconnect digitally based on factors like how much mutual interest is present which can be determined by personal interactions via in-person meetings, messages, and calls over last few years. </span></p><p id="0e6462ec-787f-4b86-9210-a0ce9efa9c7a" class="">If reconnecting is needed, we can reconnect, but generally fewer people online and in life result in less distractions and drama further leading to a sound mind and positive-sum games with long-term people.</p><p id="16fabf6c-1078-4324-9cea-a81b88e76cde" class="">
+</p><blockquote id="4bb287f7-b779-4cc7-af05-083bbe07e6de" class=""><em>&quot; We are all narcissists, some deeper on spectrum than others.&quot;
+
+- Robert Greene</em></blockquote><h2 id="a2b6b6cb-8e27-4d22-9a73-488ff3969eda" class="">5. Be Mostly Private - Restrain posts &amp; stories.</h2><p id="904376cd-b203-414b-805b-72e522aeb51f" class="">    <em> Private Digital Life ⇒  Peaceful Life.</em></p><p id="1103a39e-c2e0-482f-a3f7-74b290515c12" class="">I must only choose to post on social media when I have something to communicate, share an experience and never - to show off, get attention, justify or seek validation. I must be open &amp; vulnerable with (most) people in-person and the opposite on the internet or social media.</p><p id="9f301038-0874-47a4-875e-b69b7351234c" class="">Occasionally, I may share information that adds value to others&#x27; life or support a good cause without oversharing about it.  </p><p id="27f479eb-b13b-480d-b7be-72f0f83938fb" class="">Anything beyond that is not needed because what happens in my day-to-day life, what I do during the day when I travel etc. should not be of concern to anyone outside my immediate family and select friends &amp; acquaintances in my current phase of life with whom I shall remain in contact primarily via calls and texts. </p><p id="f7f46180-c177-457f-91ae-beacfcd9dc1f" class="">
+</p><blockquote id="46237704-e2f5-446c-b489-97b6337612b0" class=""><em>&quot;Truth-seeking is a hard and lonely business. You essentially have to understand, with deep conviction, things that you’ve been programmed to misunderstand.&quot;</em>
+
+- Naval Ravikant.</blockquote><h2 id="11f64609-c5a5-4423-b403-0457ff7b41e9" class="">6. Think, Reevaluate and Archive</h2><p id="3e146627-9589-41b5-8b73-d7b96f2c1818" class="">      Share the ongoing &amp; seal the finished.</p><p id="1aea5eef-73a1-4258-a0e1-9d3861530f06" class="">Before posting, I must think about why I am posting what I want to  post and try to delay the post to make sure its not impulsive.<span style="border-bottom:0.05em solid"> </span> I think there might come a time in future where I won&#x27;t be posting anything at all about myself on social media.</p><p id="dce213cd-ca36-4b4c-9e86-b42ec229398f" class="">After a few days (and in select cases, few months) posts shared on social media eventually become irrelevant. Most (not all) people do not truly care about other&#x27;s past or present; they might be curious but that&#x27;s different from truly caring. Even if they do care, it is hard to know about a person merely being a social media connection.</p><p id="c320259d-4ea5-47a6-b125-53c36f0b199e" class="">If someone truly cares, they will eventually contact me directly and I shall do the same for those I care about irrespective of social media presence. </p><p id="8c500e60-2cb1-4ae9-9fa5-a5c3de793517" class="">Furthermore, the algorithms only tend to show posts for about 3 to 5 days in the feed after which a post or highlight remains useful only to people who are digital stalkers. So, it is probably a good idea to <span style="border-bottom:0.05em solid">archive posts within 5 days. </span></p><p id="c4232a69-c43a-4306-9912-b96856f896a5" class="">
+</p><blockquote id="bfb2b173-4244-4fca-977d-a67deb58dccb" class="">“There are only two industries that call their customers “users”: illegal drugs and software.”
+
+- <em>Edward Tufte</em></blockquote><h2 id="6d988d83-2ba1-4f19-a425-64840e8f337b" class="">7. No social media apps on phone<strong> </strong></h2><p id="3c0249c2-924d-4e96-b922-2f74bb9f0288" class="">      <em> Nothing to really miss out on.</em></p><p id="890665f6-a5ea-4d2b-8263-00ca0c17ddd3" class="">Constant checking of social media apps on phones is driven by dopamine release, fear of missing out, conscious and unconscious comparison with people based on the posts that might not tell truth about life. According to various studies, this has lead to wasted time, lost attention span, biased views, feeling disconnected and, bad mental health among many individuals. </p><p id="9915162e-c68c-4e1b-aa20-77faef4fdea0" class="">Social media is engineered to make it as addictive as possible to maximize the profit that can be extracted via user&#x27;s attention and data. </p><p id="42b98753-30dd-4a70-a514-8630f8903875" class="">To prevent the negative effects, I must not have any social media apps on my phone (unless I am traveling and do not have access to my laptop) and have a daily allowance of about 15-20 mins for relevant social media consumption. When I do have to post stories, I may use my apps on my computer to do so. This will also make sure that I do not indulge in impulsive posting on social media.</p><p id="46b7aabd-d8ac-4aa7-9e93-c643384a6337" class="">
+</p><blockquote id="6bc5a314-bb23-4d59-bee6-49baac644a34" class=""><em>&quot;The time to fix the roof is when the sun is shining.&quot;</em>
+
+<em>-John F. Kennedy</em></blockquote><h2 id="a232c460-1ba6-4cf0-8d3f-040afad583e4" class="">8. <strong>Hibernate &amp; Refresh</strong></h2><p id="10ee75d5-1b10-4040-952c-4cb961014055" class="">Once every year, I must isolate myself from all social media by temporarily deactivating accounts, <del>deleting past activity and messages</del>, re-evaluating lists based on online/offline interaction and mutual interest to clean up social media feed and rejuvenate.</p><p id="b3a518d5-8c83-4b35-ac07-5dc7d0c2bba3" class="">
+</p><p id="b8a2e2ab-1d88-4fa3-9167-ff0cfc1b4866" class="">
+</p></div></article></body></html>

@@ -1,12 +1,12 @@
 {
-  "name": "brittanychiang.com",
+  "name": "udaymahajan.com",
   "version": "0.0.0",
-  "description": "Design-minded front-end software engineer focused on building beautiful interfaces and experiences",
+  "description": "Senior Software Engineer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/bchiang7.github.io"
+    "url": "https://github.com/udaymahajan242/Personal-Website"
   },
-  "homepage": "https://github.com/bchiang7/bchiang7.github.io",
+  "homepage": "https://github.com/udaymahajan242/Personal-Website",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp serve --watch",
@@ -24,8 +24,5 @@
     "gulp-imagemin": "6.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "3.0.2"
-  },
-  "dependencies": {
-    "cross-spawn": "^7.0.3"
   }
 }
