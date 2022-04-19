@@ -2,8 +2,8 @@
 name: Uday Mahajan
 title: Uday Mahajan | Senior Software Engineer
 description: Senior Software Engineer at Tesla
-url: https://udaymahajan242.github.io/Website/
-baseurl:  /
+url: https://udaymahajan242.github.io
+baseurl:  /Website
 logo: ./img/icons/favicon.png
 social:
   - title: email
