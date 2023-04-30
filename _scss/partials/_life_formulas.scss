@@ -1,0 +1,107 @@
+
+
+.formulas {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include weird-medium {
+      padding: 120px 70px;
+    }
+    @include phablet {
+      padding: 120px 50px;
+    }
+    @include mobile {
+      padding: 70px 50px;
+    }
+  
+    @media screen and (max-width: 600px) {
+      intro {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  
+  
+    
+    &_main, &__sub-section {
+      font-size: 2.0rem;
+      @include desktop {
+        font-size: 2.00rem;
+      }
+      @include tablet {
+        font-size: 2rem;
+      }
+      @include phablet {
+        font-size: 1.75rem;
+      }
+      @include small-mobile {
+        font-size: 1.5rem;
+      }
+      @include tiny-mobile {
+        font-size: 1.4rem;
+      }
+    
+      .emoji {
+        width: 40px;
+        height: 40px;
+        @include desktop {
+          width: 35px;
+          height: 35px;
+        }
+        @include tablet {
+          width: 30px;
+          height: 30px;
+        }
+        @include small-mobile {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    &__formulas {
+      font-weight: 300;
+      .notes {
+        background-image: url('../img/emojis/notes.png');
+        margin-left: 10px;
+        cursor: pointer;
+  
+        &.animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+        &.notes {
+          animation-name: wave;
+        }
+  
+        @keyframes wave {
+          from {
+            transform: none;
+          }
+          15% {
+            transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+          }
+          30% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+          }
+          45% {
+            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+          }
+          60% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+          }
+          75% {
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+          }
+          to {
+            transform: none;
+          }
+        }
+      }
+    }
+    
+    
+  }
