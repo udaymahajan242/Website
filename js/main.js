@@ -74,4 +74,9 @@ $(function() {
   sr.reveal('.experience', { viewFactor: 0.2 });
   sr.reveal('.featured-projects', { viewFactor: 0.1 });
   sr.reveal('.other-projects', { viewFactor: 0.05 });
+
+  function contactMessage() {
+    alert("Phone number is hidden. You may request phone number via Email.");
+  }
+ 
 });
