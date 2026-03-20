@@ -1,0 +1,776 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>A Life Well Lived</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3273ab91-7fac-80e9-8eb6-c92ac8518225" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb1.jpg" style="object-position:center 24.739999999999995%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="6148ab6f0df5db7084ec4078ac051613-removebg-preview.png"/></div><h1 class="page-title" dir="auto">A Life Well Lived</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-808d-a922-cbb275c2a988"/></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8063-a01b-efbcc8d47dc8" class=""><em>Reflections on the legacy of my grandfather.</em></p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-80da-bac8-f06536391129"/></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8049-a628-ed35ef8aaf0d" class="">As I find myself in India for my grandfather’s final rites, I am overwhelmed by the kindness extended to my family and me over these past few days. Though I may have only managed a brief word of thanks in return, please know that your support has been a steadying force.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80af-a8a9-fd08110370ec" class="">I spent my flight in quiet introspection, distilling these reflections for those who have asked how I am navigating this transition. This is my first experience losing someone with whom I shared a truly special bond, which makes it all the more meaningful to put these thoughts into words.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80b4-9ebc-e5bb4d68b546" class="">My grandfather often reminded me that it is far more important to live a quality life - one grounded in health, select but meaningful relationships, and a resilient financial foundation - than to live a long life where any of those pillars are missing. He did not merely speak these principles; he embodied them. His life touched souls far beyond his immediate family. Since his public kindness was well-known by many in our family circles, I shall offer a more personal point of view here.</p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-80f1-af77-f538f29d935b"/></div><div style="display:contents" dir="auto"><h2 id="3293ab91-7fac-8077-983a-fe82f9024dd4" class="">The Architect of the Family Trajectory</h2></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80c8-9531-c8ea91a71bd3" class="">He was the master architect of our family&#x27;s trajectory - a man of profound intent, long-term vision, and the courage to bridge two worlds. He ensured his three sons and their families remained a cohesive, uplifted unit across India and the United States. He led not through command, but through a rare stewardship that balanced firm leadership with the freedom for others to choose their own paths.</p></div>
+	
+
+  <div dir="auto" style="display:contents">
+    
+	<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="pa-carousel-widget" style="width:100%; height:480px; display:none;"
+  data-link="https://photos.google.com/share/AF1QipOMT5lUmFDofmeCzMyekn9rOSUAaDsvDW924x0jQGpvTBuLq0DdwQ3-2rQ113vGRA?key=TWNydEFXY25KaldLVFpjOEtMX3M2aUs3bFFpZ0pR"
+  data-background-color="#ffffff"
+  data-delay="2"
+  data-title="📸 A Life Well Lived ·"
+  data-description="Shared album">
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOCXEAow_N9yZ2Dzi7f98b_q1bGZc5LW-rc9fIeosfm-2s1jaR_xSpniRvq2rsv5yJZfwoTi0nR_aOoFzPHTK2xtQ8--UH3aHH6bpT9Y8KkYDKShKIl=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczP6Q_kqMPyUfxSBmEBHnaoE2gWSPa5ymwdjcidqhEN6hqn5a_h5p4h6v2H01y6TVlR4LB9hSZGyyJzLegEjyhrpipfnwaXq59I884zJaoXSaPvF4Gnt=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMniJhyVQHjTNXO7ZJXHt2HXJYSaq5nX2Cr9mp7C9B5f-YsOVBnMWvlNcYhBJFDyEMBVsPWuuu0nt8-C1mAr-9ozISOvZlQaKBBnhIQCdmXt2inT-Oh=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNk7LicvP6qZS7JQTcl2OzyiiGayMkme5fhKkSNNVQqwZlExYDtXWdkU9PgoeFPZ-35VbfdPvm9QSySsLWoMi5KFFwSefnFurEliHeFnmamt8N0JHGL=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczO2xBOxyCjVy7IjhXWBYlv4i051CpUTikLxc831VnZb9G1V5q1HilWvnOe_XCjNHmoXA_FRzk8CtACxgvS-n6LOE4s8_smhmfQH4E4ourqA2AwolkbK=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczN9YbTf5OJ2Xzfe9lfVbjyh0OwOlAZzVkmdFf_FW2DAK7wtDWrNP9VXom9LCESoljtBxVfqdNopMkulkmmAeDCUfFtmckL-D5ea480DjXsP3WT4vQcC=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOBDG-yAVZXvo7L_qGtkeGPshq6FNPKZ4C2XgX3EtNjU-9FdsIuWeePKDDTtiuafDy6GC3iCPe08kcTWuqSVJPQgxRhbicNd_JC3TDGOqQyFNJTGnH-=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNhkUeGV2HXIAjULEcqE1657bdyXYZ1xGxbAF0Azfn0WLSnbxNR1p2cePHBElCbxG0v8wA_zxcNacIowc6Sj_phM4tWAG_yma8_2Kew6SgUrobqwH3q=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNHWiAeJPjnkYlt-1Y4p5wtv6sbmMQDjVHiTRuGSAIpkHNqw3VS2Ge99AeEt7GMMV7k_5cIGhwaNx3h6BK4lBlzZkODQK4_8glcwkAiq4R-RRW6NVgf=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczM-6Lz8kXXLvte7UKvWdkSI70weHA1IGwmdhmh7XRZqj7TdW-yD6BedvFmc6vITtZW7ZsXOPP0QD7s7hRQOxcSp3-G6flHq39eeddctjEgkxR4QUdO9=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczM77iE_psNCOl9aKEo23u7kZiJL6s2iJfEyyVpVDoc5-qOZ_48Wy5ZweZ-FUW2FbiRTYoRFbGw3gAG8gIfdpitQjbYqiblDzmD6MPXZ3nfT7ZIxijL5=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOCv1zuuJ-WsG4UEDuO2SlRJjExjglN6doyj1HrS7gnwvW2pDd8iDa5qg-6EKR_b20wiZj7Zel4qnsoAtoNJECUbZRckvCwGJaKV0IMTUsHzq4281Fg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNZuE7QWlw_8C916c7myRa0WVVsCqdZO7vVSGCk236y5lWpl4QAM5xpwhVhTf5y-qyO2CsoOqM2JM1ANJzofgk-D3V058ST-Qwt_arwBXC0N7c-SjnF=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMJjioWFsE4glm70ew8TwOM2wPzQM73LX6p8V73VHucuP79GXA9zI9VNRqhmglI32R4bxW49Ve1OT9ra9m0D5chy1uDcoSdBmlFt4_EI1e7MeJbysWb=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOX-ytkW7jLHvnBHKhn3FE2iePYtmktmS8DIHBEOycW4LKELMFYqTf5XQpL2LnxH5eUzaGrM0ll2ndH2oPQe78r9-MaITlNapBWxAMBZ-n-kBzgATZe=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNQDY1_Fgz--Memif3QDnHbiQdTrAtD5OAY0oHvm_LCSOlKmWB6nph4637ZzbTXO54G18Zvmt_94SEG8wlpAb7A_AAnpieTF2ji2tAcH63WJTZdUwWB=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOj1yjObv_bik11nPXUgS8htUD25bxMvAT7Ng5-lIJyeDVfcWMdIbV-I2bbnotGA1h1gbTK0dEWi0PE61I2qX18FP96pTV8WbJP9UhavmSqLlcNr3GZ=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOxyxrgl7p1ljskND7KNU415LT84d7ZYyL7315YNm-h1080-GFg59__zatUyD9VqFHfYz0hojTMISzilvqo-AOBQqueIZBwuCv6kL7VcqOgQI1c2ubeC=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczPTIqslOiAj0H4UzkCzOxx4YL3OsGKONjkmo3vQogzwK-2i7VcVQnhftjMhmFMiahB3RqITxJWuxaOFrYLw68cUKYbcwrEom3oAeLVYVaVp1zxWCsqx=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczPyjzlSO0BjyX2iK7qH-P7e7PR20fc57aOYscrcRWy0jUF7TrAG2JFXfZ12cc2QXyx0I9zTGCIbUnkIdUwdchaLYrLlImqpSLWg_zFg6JrVDr4eKiMN=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMVju9os9-nQUB-MH5yyta-jDXy6fOfnUrcgbWb9WZF5BrkLM1QEuGVkSm7N88nXgvW7L4XX9Rr3CeIsWcjmulU42DKoDatcPES2iMro3PCDiQ4Z564=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMZlLfYNu37SjhbcMIOLSGvRiwlyWBBz4YOMQjjDIAxfxgwcAbZbiVPb2d_2ZZ7GgYgx8Xfi1rmJaz3vxGRwXiLJkdCEpPnJb-dDLEesK4M0DEb_Myd=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczPeU_Y500yvRUtMviyNr1Ky4hsbnSOmUE1Z9bXSiKsGdbaqDcFJPxouLABte6QUGYnUWQ-lzIBRXrHGJDdzjZJnyrmehehr5u4rAOih6G5xMM1F0j-D=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczPkZjibqPyogvV_djngdw_aRkA0cujFy7r2oasE1Kkn9UnMeJY6o_gNu5wQHz07IKARWTOjE0g1kq7PngHg0YcbEYzt0WPlf1nnFYLTBNAlEkuRNwdI=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNZLkvUFjwNASQlhKb10jibZa8P2PWdv1QzgnVEinFogSaE2I6jiPUaSBGH9Z5m8eVT3kMJg-WeR1g_M9JVNswlWP9fts5oIT_UNkpZXUJWIW6yYWd6=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczP4_mT7S_L_cAFGV7nm-Csgvm1GzsmQ8fEqPZxrQzIEl5cOyegr0vigGemZVnmU7XaV6Wh7m_gt4fqOVv-OIblfQXA1D19ad5FHJm2pt9nqj6BfEngD=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOX1V_3KyHt-7_5Pnko7xbrAT5odSi9Pcj4PJ7vgCISkeF35-WbXSZ1eOVNYsNQugVHj6Zdl042pSxjefablElcD4n_iE6fL64hq-MSpcI3gpIfdC1X=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczN28U-KkyOoUuyF_M4xbIcVQYnWHf37ueUtRMQcukDiSc6L2jCRVGo6GWMJU7zO4AdasC1dXDRO0a1Yl2MuyP79_ykie8lQiGkHV5-69LPq_OzzWgt-=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMjcnjKcj-CHrXNJgJNfIZkHx3Ftcoh7cXiWh99ZS_74FFUemeOZ_TwF91283qkDkE8yoHrW1_eqT-nBx9elPwBuWnP-5ECQcjdPs0zKh5EIlD7ebKA=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOh3C8Bif06DTu40LlQVf-Za_hMg1wgg_Ux6eeBQMIPd04NNDPtCx9UgIW599R73ldtzB3h9k_7GgfWVVOCnXv9nUsSr80o7CDvRth7Jvoz_NCMMVLJ=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczN6M2w3NAHu9o2YFwTkmvU4ad3KNTFGm3CZkXNaTUWgGtNTCIUTTYXEU1v6nT4X2I2aYXBPedqMl0aOgagzSpODa0HYA1fv1CKVkuvu7Y793crTXUA3=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNa5ro6myKmvtr3MAsUZKiOLEHuyGpM2b-mc9mdmfZ2vmDVRUFYGUxwgfNQ0HKvFZVSuvwjCwp33CtgAYTyHYHeX271TZYlUhvtlC1kiUWG10iBQmFN=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczM-P9CBSiZVATXdZFyjvtq8XgfWfHQvxBxTz3re1xxNrygmUowM2cNQviUIrpXUVncYvRfLSSlzkkIm8eiYxh-MqY1c_x9jZLlz4esbob2WhwuKbWpz=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMpZBrqx94iP7RYj5Io2Zbg42JeLgHMAYA2AwN4dM2tB97Z4shs4CywauymzEP4B7G9fthldtChAZN1AOyKEX4wsnFk8QMFlqG8hLfk3zJjFU5uRefg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOLtRh-MWPQ-WDwM_M62GJ_m1lWdN6S3_WnnrqvbpPbQq-tBhZHdEv1Wth8d86iYZEnx1ZQxX9qem0rtWk0GloiyH3OEulg_RfklyAFNHpM_xKalbci=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczOpDlK3XRwLDc0BgnaBFcAZE8MkjuCPz0oSc_RmkSr1U1XaznfOqGGcrtXtfD-mVKRM6FVb9ExFVwvNagFnJOlCYp5ptCoUsNNGh5EDlduq3hElYcwi=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczPc6ol2bp9uHXHOrTzhgSE3a4lQOG2f05Bg36wPrVMYN4zv_qcheAcPGh-ix7GpyhH16TlFL4MB01dkJnd-ZxIv1FUZKoVwEd4yqqYiHKFn5B0W1OGs=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczP9fPkSThFw5rhzexe_jt7BaGO0naUv3D2tm8sVpYI__X-CMIqgaPo-ii6naXnh53ZE1qOku8YyP_jRmZv_O8TIn69-s8_KohX7PoSf9IYxpUyrE016=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczM7cqWeQTp8cPlGu8T8foNaEGq27atsVAyXbXKKVH07ew1SXYSuieOiLnr5uycWrmC9_w7M1QpIfzjR-GGiULflk-aqJsh3qm7-wzAJEUYMIv6-mDEW=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczNKrcjbhDZ1-JBHoMApBIJLLOIKRdraxyBuPR5gXw6bNTzeVzbxuYzKtXP1gR-W0iK9CSuly9YiLvjP0YX2bhOj1F5en_aYW_ykxGjY81dhG3VNsdO-=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczP3eV7zx3ssmlLunDAt_RYU0AFnXqzELxd-qnwkDPa106JU-MNbKtR2E3C_k9kA30oynx5eOTo1flW7RVqmg0silDJrkcA6sQmcRwYij5aCYNCD41qN=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczObspJ2RShiyMm3lzUGdPOujvHn875vBFOrt8GJ2FrxOiGi7BSTFSSzPp74ok23WgZl9s5TfBv546_HALafkWEwUz6NUXOMHFgwNdSPUCK6W--rVvAs=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczO4rsj4P2rlxLPcH9sgdNYBnbg4E_YlOSIUpye2l1vSQXFm3BuVX8HRO4SnRk9dYJ44IrJV_3JpK40ObNOoaGSo8VJDv2OZKPQ1sz4KaGRrLGYFI-vv=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczPOPaMSq1bI7NMrqw3bgCK9FsFKX-y3TS88h4fqCuWlf0pjwsX8ArXN-g_FNV4jTslMh2PTIh-5nz9EXo6HK1Xlpw77yYUJWmVkDQ9NFUgZF2p7uuuD=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/pw/AP1GczMCBja3F1oPDFKU0PUfXfqtRPvw9vv8wG-uewxf4Z7u9EOHWk52wcMioQuqlDE-CjozqGPzE4fToy8l34ble7ouX_0oCY-YwCbrjZQJ8_zJ4mnl0k2f=w1920-h1080"></object>
+ 
+ 
+
+</div>
+
+    </div>
+
+<div style="display:contents" dir="auto"><p id="3293ab91-7fac-8000-a87e-f976684c9b78" class="">In the polarizing world we live in today, it is easy for families to drift apart due to contrasting priorities. He was the primary reason our family values remain what they are: a commitment to coming together despite any external forces. Now that he is no longer here to guide us directly, this responsibility carries even greater weight. It is our duty to uphold his lessons and wishes throughout our own lifetimes.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8049-828b-c6d16c18324a" class="">What remains inspiring is that his wisdom was not a product of formal titles, but of lived experience and an intuitive grasp of the world. Though naturally gifted in mathematics, his true power lay in the audacity to do what had never been done before in his circles. This included building a business from the ground up, navigating the complexities of immigration to the United States when the path was unclear or emotionally distressing, encouraging his daughter-in-law to establish her own dental practice in the US, while also being a steady and caring presence for everyone, especially his grandchildren, across so many phases of their lives.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8066-ab24-ceafd54081d7" class="">He excelled at the art of stewardship - engaging in meaningful conversation and thinking several steps ahead while remaining anchored to his values. His life was a transformative journey of lifting himself and everyone around him to a higher plane of existence.</p></div><div style="display:contents" dir="auto"><h2 id="3293ab91-7fac-8047-bd5b-edf9949a6328" class="">Lessons in Quiet Greatness</h2></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80cb-b191-cc4b468af533" class="">Just as feelings cannot be fully replicated, the influence he had on me personally is impossible to quantify. While he taught me the practicalities of life - riding a bicycle, driving a car, and managing finances - the most enduring lessons came from observing the subtler qualities of his character during the years we lived together in the U.S.</p></div><div style="display:contents" dir="auto"><ul id="3293ab91-7fac-80e4-a1ae-c6cdc65b55da" class="bulleted-list"><li style="list-style-type:disc"><strong>Radical Empathy:</strong> To listen, reflect, and act only after genuinely considering what it means to walk in another&#x27;s shoes.</li></ul></div><div style="display:contents" dir="auto"><ul id="3293ab91-7fac-80b5-9920-e7c56aef81cb" class="bulleted-list"><li style="list-style-type:disc"><strong>Humility over Ego:</strong> To keep conversations centered on the good in others, rather than fixating on oneself or seeking to criticize.</li></ul></div><div style="display:contents" dir="auto"><ul id="3293ab91-7fac-80a4-ad4e-cef4dceb3605" class="bulleted-list"><li style="list-style-type:disc"><strong>The Diplomat&#x27;s Heart:</strong> To hold a family together and resolve misunderstandings through transparent, well-intentioned leadership.</li></ul></div><div style="display:contents" dir="auto"><ul id="3293ab91-7fac-8090-bb03-c1fdb93fb64a" class="bulleted-list"><li style="list-style-type:disc"><strong>Decision Stewardship:</strong> To make few decisions, but to make them firmly, from a place of calm neutrality and keeping in mind the long-term consequences.</li></ul></div><div style="display:contents" dir="auto"><ul id="3293ab91-7fac-80d5-b97d-c3e244564a77" class="bulleted-list"><li style="list-style-type:disc"><strong>Silent Contribution:</strong> Perhaps his rarest quality was that he never took credit for his good deeds, nor for the success of those he quietly helped along the way.</li></ul></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80ce-ac5a-da6619899ce3" class="">It is common for people to claim partial ownership of another&#x27;s success or to hold up support as evidence of what they are &quot;owed.&quot; My grandfather possessed a bird&#x27;s-eye view. He understood that success is a beautiful tapestry woven from many threads, and he was content being a quiet, vital part of that whole. He trusted in the fundamentals of <a href="https://www.britannica.com/topic/karma">Karma</a>: that deeds carried out with righteous intention, courage and patience will eventually yield positive outcomes, regardless of when or if at all they are recognized by others</p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-80e1-b14a-cfdf15a5c6f5"/></div><div style="display:contents" dir="auto"><h2 id="3293ab91-7fac-8003-93d4-e41ab6c06c5f" class="">How I Am Processing This</h2></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8065-b810-e4d94bfdd4f3" class="">In the days leading to his passing, I felt a distinct intuition that his departure was imminent. When the news arrived, the heavy silence was quickly met by a profound sense of peace as he lived with dignity and departed with a smile, free from discomfort - a completion that feels inherently &quot;right.&quot;</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80b6-aed9-c7234f4b556f" class="">That peace  within me did not arrive by accident. It is grounded in my study of the Bhagavad Gita and <a href="https://iep.utm.edu/advaita-vedanta/">Advaita Vedanta</a>. I have observed a striking convergence in various ancient traditions- from <a href="https://www.britannica.com/topic/Taoism">Taoism</a> and <a href="https://en.wikipedia.org/wiki/Dzogchen">Dzogchen</a> to <a href="https://en.wikipedia.org/wiki/Kashmir_Shaivism">Kashmiri Shaivism</a>, <a href="https://iep.utm.edu/neoplato/">Neoplatonism</a>, and <a href="https://www.britannica.com/topic/Sufism">Sufism</a>. They all illuminate a wisdom I have come to feel rather than merely understand: that death is as beautiful and necessary as birth.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8052-886a-d682a65bc150" class="">The wise do not lament for the living or the dead. Death is a transition to the next phase of the eternal energy we call <a href="https://www.britannica.com/topic/atman">Atman</a> [not the same as western concept of the soul]. Advaita Vedanta, in particular, has clarified for me the vital distinction between <em>Moh</em> (attachment) and <em>Prem</em> (love) necessary for leading a good life.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8055-89c8-dc188b2c8030" class="">Understanding the absolute equivalence of Atman and <a href="https://www.britannica.com/topic/brahman-Hindu-concept">Brahman</a> has allowed me to move through this moment with ease and depth. I am not grieving in the traditional sense shedding tears; rather, I am honoring an Atman that is continuing its journey back to its source, carrying forward the net balance of its karma and the spiritual learnings gathered across this lifetime.</p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-80ba-9a6f-d9ad0a985480"/></div><div style="display:contents" dir="auto"><h2 id="3293ab91-7fac-80f7-b454-ef3d157df3cc" class="">Gratitude for Those Who Carried Him</h2></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8029-bc1e-c0104cb6e2aa" class="">I am deeply moved by the strength of my entire family, particularly my parents. They cared for him in India during his final years in a way that is increasingly rare to witness in today&#x27;s world. In one sense, it is kind of a beautiful albeit demanding completion of a cycle of this lifetime. The children, who were once cared for by their parents with tireless devotion during their earliest and most vulnerable years, now return that same love and attentiveness to their parents in kind.</p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-805d-bb64-c805b6bd830d"/></div><div style="display:contents" dir="auto"><h2 id="3293ab91-7fac-8015-974b-c909d5317cb6" class="">A Final Thought</h2></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-807e-8b1b-e48060bb6daa" class="">Having lived closely with him, I can say with honesty that he was not a &quot;perfect&quot; man in every dimension. Yet I have always felt that he was a spiritually advanced soul -someone closer to the ultimate truth of reality than almost anyone I have personally known.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-800e-833d-e7bf4d87a98d" class="">His life reinforced my belief that the greatest impact is made in silence rather than announced, that it must extend beyond one&#x27;s immediate circle, and that it must be offered without expectation.</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80c6-a928-ec32affb8ed5" class="">Ultimately, the greatest love is not the kind that binds, but the kind that sets you free to grow.</p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-8084-8bf7-d04296085b15"/></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-80cc-a8c7-d663f398a6df" class="">
+</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-808e-a5ea-ee694b346ec2" class="">                                                              ॐ शान्तिः शान्तिः शान्तिः॥</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8030-87e0-cdf2ec2edc59" class="">
+</p></div><div style="display:contents" dir="auto"><p id="3293ab91-7fac-8095-873f-dade01f3709f" class="">With Love,<br/>Uday.</p></div><div style="display:contents" dir="auto"><hr id="3293ab91-7fac-80e3-9464-ece03b4c5a6a"/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
